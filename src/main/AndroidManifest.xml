@@ -19,7 +19,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAvt36HzEdhUVKpKSmPk2iynEXX7A8YIXk" />
+            android:value="YourAPI_key" />
 
         <activity
             android:name=".view.TarlaDetayActivity"
