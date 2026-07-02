@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D5B485"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="32dp"
+    tools:context=".view.MainActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="529dp"
+        android:layout_height="520dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnZiraatci"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:text="Ziraat Mühendisi"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:backgroundTint="#9AC84C"
+        app:strokeColor="#775438"
+        app:strokeWidth="3dp"
+        app:cornerRadius="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCiftci"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="24dp"
+        android:text="Çiftçi"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:backgroundTint="#9AC84C"
+        app:strokeColor="#775438"
+        app:strokeWidth="3dp"
+        app:cornerRadius="8dp" />
+
+</LinearLayout>

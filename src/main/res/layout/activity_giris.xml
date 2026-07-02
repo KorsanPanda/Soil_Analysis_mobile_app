@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.GirisActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="#9AC84C"
+        android:gravity="center"
+        android:text="Giriş Yap"
+        android:textColor="#333333"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewUser"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="32dp"
+        android:contentDescription="Kullanıcı İkonu"
+        android:src="@drawable/ic_person"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextUsername"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextUsername"
+        app:tint="#775438" />
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/input_border"
+        android:hint="Kullanıcı Adı"
+        android:inputType="textPersonName"
+        android:textColor="#333333"
+        android:textColorHint="#757575"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewUser"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <ImageView
+        android:id="@+id/imageViewPassword"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:contentDescription="Şifre İkonu"
+        android:src="@drawable/ic_lock"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/imageViewUser"
+        app:layout_constraintTop_toTopOf="@+id/editTextPassword"
+        app:tint="#775438" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/input_border"
+        android:hint="Şifre"
+        android:inputType="textPassword"
+        android:textColor="#333333"
+        android:textColorHint="#757575"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextUsername"
+        app:layout_constraintStart_toStartOf="@+id/editTextUsername"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonRegister"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:text="KAYIT OL"
+        android:textColor="#333333"
+        app:backgroundTint="#9AC84C"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/ic_register"
+        app:iconTint="#333333"
+        app:layout_constraintEnd_toStartOf="@+id/buttonLogin"
+        app:layout_constraintStart_toStartOf="@+id/imageViewPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
+        app:strokeColor="#775438"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonLogin"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:text="GİRİŞ"
+        android:textColor="#333333"
+        app:backgroundTint="#9AC84C"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/ic_check"
+        app:iconTint="#333333"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
+        app:layout_constraintStart_toEndOf="@+id/buttonRegister"
+        app:layout_constraintTop_toTopOf="@+id/buttonRegister"
+        app:strokeColor="#775438"
+        app:strokeWidth="2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

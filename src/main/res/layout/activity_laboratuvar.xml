@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".view.LaboratuvarActivity">
+
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#9AC84C"
+        android:gravity="center"
+        android:text="Laboratuvar Sonucu"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonAllRecords"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="Tüm Kayıtlar"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        app:backgroundTint="#9AC84C"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/ic_menu"
+        app:iconGravity="start"
+        app:iconTint="#333333"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#775438"
+        app:strokeWidth="2dp" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAllRecords"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeader">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvTarlaSahibi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tarla Sahibi"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etTarlaSahibi"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_border"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="12dp"
+                android:textColor="#333333"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTarlaSahibi" />
+
+            <TextView
+                android:id="@+id/tvParselId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Parsel Id"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/etParselId"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/etParselId" />
+
+            <EditText
+                android:id="@+id/etParselId"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_border"
+                android:inputType="number"
+                android:paddingHorizontal="12dp"
+                android:textColor="#333333"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etTarlaSahibi" />
+
+            <TextView
+                android:id="@+id/tvLabSonuclari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Laboratuvar Sonuçları"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etParselId" />
+
+            <TextView
+                android:id="@+id/tvPh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pH"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/etPh"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/etPh" />
+
+            <EditText
+                android:id="@+id/etPh"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/input_border"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="12dp"
+                android:textColor="#333333"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLabSonuclari" />
+
+            <TextView
+                android:id="@+id/tvOrganik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Organik Madde"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/etOrganik"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/etOrganik" />
+
+            <EditText
+                android:id="@+id/etOrganik"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_border"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="12dp"
+                android:textColor="#333333"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etPh" />
+
+            <TextView
+                android:id="@+id/tvFosfor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fosfor"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/etFosfor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/etFosfor" />
+
+            <EditText
+                android:id="@+id/etFosfor"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_border"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="12dp"
+                android:textColor="#333333"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etOrganik" />
+
+            <TextView
+                android:id="@+id/tvPotasyum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Potasyum"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/etPotasyum"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/etPotasyum" />
+
+            <EditText
+                android:id="@+id/etPotasyum"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_border"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="12dp"
+                android:textColor="#333333"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etFosfor" />
+
+            <TextView
+                android:id="@+id/tvOnerilenMahsul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Önerilen Mahsul"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etPotasyum" />
+
+            <TextView
+                android:id="@+id/tvMahsulTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="Mahsul"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/tvVerimTitle"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOnerilenMahsul" />
+
+            <TextView
+                android:id="@+id/tvVerimTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                android:text="Tahmini Verim"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/tvMahsulTitle"
+                app:layout_constraintTop_toTopOf="@+id/tvMahsulTitle" />
+
+            <EditText
+                android:id="@+id/etMahsul1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_border"
+                android:inputType="text"
+                android:paddingHorizontal="12dp"
+                android:textColor="#333333"
+                app:layout_constraintEnd_toEndOf="@+id/tvMahsulTitle"
+                app:layout_constraintStart_toStartOf="@+id/tvMahsulTitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvMahsulTitle" />
+
+            <EditText
+                android:id="@+id/etVerim1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@drawable/input_border"
+                android:inputType="number"
+                android:paddingHorizontal="12dp"
+                android:textColor="#333333"
+                app:layout_constraintBottom_toBottomOf="@+id/etMahsul1"
+                app:layout_constraintEnd_toEndOf="@+id/tvVerimTitle"
+                app:layout_constraintStart_toStartOf="@+id/tvVerimTitle"
+                app:layout_constraintTop_toTopOf="@+id/etMahsul1" />
+
+            <EditText
+                android:id="@+id/etMahsul2"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_border"
+                android:inputType="text"
+                android:paddingHorizontal="12dp"
+                android:textColor="#333333"
+                app:layout_constraintEnd_toEndOf="@+id/etMahsul1"
+                app:layout_constraintStart_toStartOf="@+id/etMahsul1"
+                app:layout_constraintTop_toBottomOf="@+id/etMahsul1" />
+
+            <EditText
+                android:id="@+id/etVerim2"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@drawable/input_border"
+                android:inputType="number"
+                android:paddingHorizontal="12dp"
+                android:textColor="#333333"
+                app:layout_constraintBottom_toBottomOf="@+id/etMahsul2"
+                app:layout_constraintEnd_toEndOf="@+id/etVerim1"
+                app:layout_constraintStart_toStartOf="@+id/etVerim1"
+                app:layout_constraintTop_toTopOf="@+id/etMahsul2" />
+
+            <EditText
+                android:id="@+id/etMahsul3"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/input_border"
+                android:inputType="text"
+                android:paddingHorizontal="12dp"
+                android:textColor="#333333"
+                app:layout_constraintEnd_toEndOf="@+id/etMahsul2"
+                app:layout_constraintStart_toStartOf="@+id/etMahsul2"
+                app:layout_constraintTop_toBottomOf="@+id/etMahsul2" />
+
+            <EditText
+                android:id="@+id/etVerim3"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@drawable/input_border"
+                android:inputType="number"
+                android:paddingHorizontal="12dp"
+                android:textColor="#333333"
+                app:layout_constraintBottom_toBottomOf="@+id/etMahsul3"
+                app:layout_constraintEnd_toEndOf="@+id/etVerim2"
+                app:layout_constraintStart_toStartOf="@+id/etVerim2"
+                app:layout_constraintTop_toTopOf="@+id/etMahsul3" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonKaydet"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="KAYDET"
+                android:textColor="#333333"
+                app:backgroundTint="#9AC84C"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etVerim3"
+                app:strokeColor="#775438"
+                app:strokeWidth="2dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
